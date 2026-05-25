@@ -1,0 +1,211 @@
+==================================================
+ ARCHIVO: AccionServicioUsuarioEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class AccionServicioUsuarioEntity
+    {
+        public int accionId { get; set; }
+        public int servicioUsuarioId { get; set; }
+        public string accion { get; set; }
+        public string servicioUsuario { get; set; }
+        public bool activo { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CuentaRolAplicacionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class CuentaRolAplicacionEntity
+    {
+        public int cuentaId_ { get; set; }
+        public int rolId_ { get; set; }
+        public string rol_ { get; set; }
+        public string cuenta_ { get; set; }
+        public string aplicacion_ { get; set; }
+        public bool activa { get; set;  }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CuentaRolEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class CuentaRolEntity
+    {
+        public int cuentaId_ { get; set; }
+        public int rolId_ { get; set; }
+        public string rol_ { get; set; }
+        public string cuenta_ { get; set; }        
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ModuloAplicionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class ModuloAplicionEntity
+    {
+        public int aplicacionId_ { get; set; }
+        public int moduloId_ { get; set; }
+        public string aplicacion_ { get; set; }
+        public string modulo_ { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RolAccionAplicacionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class RolAccionAplicacionEntity
+    {
+        public string servicio_ { get; set; }
+        public string modulo_ { get; set; }
+        public string accion_ { get; set; }
+        public int accionId_ { get; set; }                     
+        public bool activa_ { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RolAccionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class RolAccionEntity
+    {
+        public int rolAccionId_ { get; set; }
+        public int rolId_ { get; set; }
+        public int accionId_ { get; set; }
+        public string rol_ { get; set; }
+        public string accion_ { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RolAplicacionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class RolAplicacionEntity
+    {
+        public int aplicacionId { get; set; }
+        public int rolId { get; set; }
+        public string aplicacion { get; set; }
+        public string rol { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RolCuentaRolEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class RolCuentaRolEntity
+    {
+        public int cuentaId_ { get; set; }
+        public string cuenta { get; set; }
+        public int cuentaRolId { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ServicioUsuarioModuloEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class ServicioUsuarioModuloEntity
+    {
+        public int servicioUsuarioId_ { get; set; }
+        public int moduloId_ { get; set; }
+        public string servicioUsuario_ { get; set; }
+        public string modulo_ { get; set; }
+    }
+}
+
+
+

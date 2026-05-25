@@ -1,0 +1,1738 @@
+==================================================
+ ARCHIVO: CatalogoList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class CatalogoList
+    {
+        public int catalogoId { get; set; }
+        public string catalogoName { get; set; }
+        public string catalogoDesc { get; set; }
+        public bool estado { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ClienteCombo.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class ClienteCombo
+    {
+        public int clienteID { get; set; }
+        public string clienteName { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ClienteList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class ClienteList
+    {
+        public int clienteID { get; set; }
+        public int personaID { get; set; }
+        public string clienteName { get; set; }
+        public string municipio { get; set; }
+        public string lugarTrabajo { get; set; }
+        public string puesto { get; set; }
+        public string observacion { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: Clientes.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class Clientes
+    {
+        public int nStbClienteID { get; set; }
+        public string cCodigoCliente { get; set; }
+        public int nStbPersonaID { get; set; }
+        public string nombresApellidos { get; set; }
+        public string sexo { get; set; }
+        public string cDireccion { get; set; }
+        public bool nTrabaja { get; set; }
+        public string cLugarTrabajo { get; set; }
+        public string cDireccionTrabajo { get; set; }
+        public string puesto { get; set; }
+        public decimal nSueldoMensual { get; set; }
+        public string cObservaciones { get; set; }
+        public string prestamoActivo { get; set; }
+        public DateTime dFechaDesdeDireccion { get; set; }
+        public DateTime dFechaHastaDireccion { get; set; }
+        public DateTime dFechaNacApertura { get; set; }
+        public string cTelefono1 { get; set; }
+        public string cCelular1 { get; set; }
+        public string cNumeroCedula { get; set; }
+        public string cSiglas { get; set; }
+        public string cNumeroRUC { get; set; }
+        public string cEMail { get; set; }
+        public byte[] bFoto { get; set; }
+        public int edad { get; set; }
+        public string estadoCivil { get; set; }
+        public string escolaridad { get; set; }
+        public string profesion { get; set; }
+        public string tipoVivienda { get; set; }
+        public string municipio { get; set; }
+        public string periodoDireccion { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CredencialesConexion.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public static class CredencialesConexion
+    {
+        public static string _servidor;
+        public static string _baseDatos;
+        public static string _usuarioBase;
+        public static string _claveUsuarioBase;
+        public static string _modoAutenticacion;
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CreditoEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class CreditoEntity
+    {
+        public int creditoID { get; set; }
+        public string numeroSolicitud { get; set; }
+        public string cliente { get; set; }
+        public string fechaSolicitud { get; set; }
+        public string rubro { get; set; }
+        public decimal montoSolicitado { get; set; }
+        public decimal montoAprobado { get; set; }
+        public string estadoSolicitud { get; set; }
+        public string moneda { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CreditoList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class CreditoList
+    {
+        public int creditoID { get; set; }
+        public string numeroSolicitud { get; set; }
+        public string cliente { get; set; }
+        public string fechaSolicitud { get; set; }
+        public string rubro { get; set; }
+        public decimal montoSolicitado { get; set; }
+        public decimal montoAprobado { get; set; }
+        public string estadoSolicitud { get; set; }
+        public string moneda { get; set; }
+        public int clienteId { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CreditoListCombo.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class CreditoListCombo
+    {
+        public int creditoID { get; set; }       
+        public string cliente { get; set; }
+        public string fechaSolicitud { get; set; }
+        public string rubro { get; set; }
+        public decimal montoSolicitado { get; set; }
+        public decimal montoAprobado { get; set; }
+        public string estadoSolicitud { get; set; }
+        public string moneda { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CuotaPendientePagoGrid.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class CuotaPendientePagoGrid
+    {
+        public int N_CUOTA { get; set; }
+        public int N_AMORTIZACION_ID { get; set; }
+        public DateTime D_FECHA_PAGO { get; set; }
+        public int N_DIAS_VENCIDOS { get; set; }
+        public Decimal N_SALDO_AMORTIZACION { get; set; }
+        public Decimal N_ABONO_AMORTIZACION { get; set; }
+        public Decimal N_SALDO_MANTENIMIENTO { get; set; }
+        public Decimal N_ABONO_MANTENIMIENTO { get; set; }
+        public Decimal N_SALDO_INTERES { get; set; }
+        public Decimal N_ABONO_INTERES { get; set; }
+        public Decimal N_MORA { get; set; }
+        public Decimal N_ABONO_MORA { get; set; }
+        public Decimal N_MONTO_PAGO { get; set; }
+        public Decimal N_MONTO_EXHONERA_MR { get; set; }
+        public string C_ESTATUS { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DatosPrestamoConPagosRealizadosEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DatosPrestamoConPagosRealizadosEntity
+    {
+        public int SOICITUDID { get; set; }
+        public string RUBRO { get; set; }
+        public DateTime FECHAINICIA { get; set; }
+        public DateTime FECHAFIN { get; set; }
+        public Decimal INTERES { get; set; }
+        public byte NOPAGOS { get; set; }
+        public byte PLAZO { get; set; }
+        public Decimal MONTOAPROBADO { get; set; }
+        public Decimal MONTOPAGADO { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DatosPrestamoEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DatosPrestamoEntity
+    {
+        public int? solicitudID_ { get; set;}
+        public Decimal? nMonto_ { get; set; }
+        public Decimal? deslizamiento_ { get; set; }
+        public DateTime fechaInicio_ { get; set; }
+        public int? plazo_ { get; set; }
+        public Decimal? interes_ { get; set; }
+        public DateTime fechaVence_ { get; set; }
+        public int? frecuencia_ { get; set; }
+        public int? numeroPagos_ { get; set; }
+        public Decimal? tipoCambio_ { get; set; }
+        public string rubro_ { get; set; }
+        public DateTime? fechaUltimoPago { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DesembolsoDetalleEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DesembolsoDetalleEntity
+    {        
+        public int desembolsoID { get; set; }              
+        public string cliente { get; set; }
+        public byte[] foto { get; set; }
+        public string fechaDesembolso { get; set; }
+        public Decimal montoDesembolso { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DesembolsoEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DesembolsoEntity
+    {
+        public int desembolsoID { get; set; }
+        public int solicitudID { get; set; }
+        public string cliente { get; set; }
+        public string fechaDesembolso { get; set; }
+        public string moneda { get; set; }
+        public Decimal? montoDesembolso { get; set; }
+        public Decimal? montoComision { get; set; }
+        public Decimal? montoTotal { get; set; }
+        public string estado { get; set; }
+        public int clienteId { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DesembolsoPagoEntityList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DesembolsoPagoEntityList
+    {
+        public int desembolsoPagoID { get; set; }
+        public int desembolsoID { get; set; }
+        public string fecha { get; set; }
+        public Decimal monto { get; set; }
+        public string tipoPago { get; set; }
+        public int tipoPagoID { get; set; }  
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DetalleCuotaCalculoDiarioRpt.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DetalleCuotaCalculoDiarioRpt
+    {
+        public int nScrSolicitudID { get; set; }
+        public string cliente { get; set; }
+        public Decimal nTasaInteres { get; set; }
+        public Decimal nComision { get; set; }
+        public Int16 frecuencia { get; set; }
+        public Int16 nPlazoMeses { get; set; }
+        public Int16 nPagosAnios { get; set; }
+        public Int16 NumPagos { get; set; }
+        public string moneda { get; set; }
+        public Decimal nMontoApruebaC { get; set; }
+        public DateTime dFechaPagado { get; set; }
+        public string estado { get; set; }
+        public decimal nMontoTCambio { get; set; }
+        public string rubro { get; set; }
+        public string proceso { get; set; }
+        public DateTime dFecha { get; set; }
+        public decimal nTipoCambio { get; set; }
+        public decimal nMontoEntregado { get; set; }
+        public decimal nMmtoValor { get; set; }
+        public decimal nAmortizacionPrincipal { get; set; }
+        public decimal nMontoAcumuladoAntes { get; set; }
+        public decimal nMontoAcumulado { get; set; }
+        public DateTime dFechaDesde { get; set; }
+        public DateTime dFechaHasta { get; set; }
+        public Int16 nDias { get; set; }
+        public decimal nInteresCorriente { get; set; }
+        public decimal nMoratorios { get; set; }
+        public decimal nMmtoInteres { get; set; }
+        public decimal nAmortizacionInteres { get; set; }
+        public decimal nInteresAcumulado { get; set; }
+        public decimal nSaldoTotal { get; set; }
+        public string nFuenteSaldos { get; set; }
+        public Int16 nEstado { get; set; }
+        public int nScrPagoCuotaID { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DistribucionPagoEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DistribucionPagoEntity
+    {
+        public int N_INDICE { get; set; }
+        public int N_SOLICITUD_ID { get; set; }
+        public int N_PAGO_ID { get; set; }
+        public int N_NUMERO_CUOTA { get; set; }
+        public DateTime D_FECHA_CORTE { get; set; }
+        public Decimal N_TIPO_CAMBIO { get; set; }
+        public Int16 N_DIAS_ENTRE_FECHA { get; set; }
+        public Decimal N_SALDO_TOTAL { get; set; }
+        public Decimal N_DESEMBOLSO_ACTUALIZADO { get; set; }
+        public Decimal N_PRINCIPAL_PAGADO { get; set; }
+        public Decimal N_SALDO_DOLARES { get; set; }
+        public Decimal N_SALDO_AMORTIZACION { get; set; }
+        public Decimal N_MONTO_PAGO { get; set; }
+        public Decimal N_MONTO_PAGO_ACUMULADO { get; set; }
+        public Decimal N_MANTENIMIENTO_DEVENGADO_AM { get; set; }
+        public Decimal N_MANTENIMIENTO_DEVENGADO_ACUMULADO_AM { get; set; }
+        public Decimal N_MANTENIMIENTO_ABONADO_AM { get; set; }
+        public Decimal N_MANTENIMIENTO_ABONADO_ACUMULADO_AM { get; set; }
+        public Decimal N_MANTENIMIENTO_PENDIENTE_AM { get; set; }
+        public Decimal N_MANTENIMIENTO_PENDIENTE_ACUMULADO_AM { get; set; }
+        public Decimal N_AMORTIZACION_DEVENGADA { get; set; }
+        public Decimal N_AMORTIZACION_DEVEGADA_ACUMULADA { get; set; }
+        public Decimal N_AMORTIZACION_ABONADA { get; set; }
+        public Decimal N_AMORTIZACION_ABONADA_ACUMULADA { get; set; }
+        public Decimal N_AMORTIZACION_PENDIENTE { get; set; }
+        public Decimal N_AMORTIZACION_PENDIENTE_ACUMULADO { get; set; }
+        public Decimal N_SALDO_ERES { get; set; }
+        public Decimal N_INTERES_DEVENGADO { get; set; }
+        public Decimal N_INTERES_DEVENGADO_ACUMULADO { get; set; }
+        public Decimal N_INTERES_ABONADO { get; set; }
+        public Decimal N_INTERES_ABONADO_ACUMULADO { get; set; }
+        public Decimal N_INTERES_PENDIENTE { get; set; }
+        public Decimal N_INTERES_PENDIENTE_ACUMULADO { get; set; }
+        public Decimal N_MANTENIMIENTO_DEVENGADO_IC { get; set; }
+        public Decimal N_MANTENIMIENTO_DEVENGADO_ACUMULADO_IC { get; set; }
+        public Decimal N_MANTENIMIENTO_ABONADO_IC { get; set; }
+        public Decimal N_MANTENIMIENTO_ABONADO_ACUMULADO_IC { get; set; }
+        public Decimal N_MANTENIMIENTO_PENDIENTE_IC { get; set; }
+        public Decimal N_MANTENIMIENTO_PENDIENTE_ACUMULADO_IC { get; set; }
+        public Decimal N_AMORTIZACION_TOTAL { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DocumentosAsociados.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DocumentosAsociados
+    {
+        public int creditoSolicitudID { get; set; }
+        public int creditoID { get; set; }
+        public int documentoID { get; set; }
+        public string noSolicitud { get; set; }
+        public string cliente { get; set; }
+        public string documento { get; set; }
+        public byte[] documentoFoto { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DocumentosList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class DocumentosList
+    {
+        public int documentoID { get; set; }
+        public string tipoDocumento { get; set; }
+        public string nombreDocumento { get; set; }
+        public byte[] foto { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: EmpresaDatos.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class EmpresaDatos
+    {
+        public int nStbEmpresaID { get; set; }
+        public string cNombreEmpresa { get; set; }
+        public string cNombreCortoEmpresa { get; set; }
+        public string cRazonSocialEmpresa { get; set; }
+        public string cDireccionEmpresa { get; set; }
+        public string cNumeroRUCEmpresa { get; set; }
+        public string cNumeroPatronalEmpresa { get; set; }
+        public byte[] bLogoEmpresa { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: EmpresaDatosPlantilla.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public static class EmpresaDatosPlantilla
+    {
+        public static int _nStbEmpresaID { get; set; }
+        public static string _cNombreEmpresa { get; set; }
+        public static string _cNombreCortoEmpresa { get; set; }
+        public static string _cRazonSocialEmpresa { get; set; }
+        public static string _cDireccionEmpresa { get; set; }
+        public static string _cNumeroRUCEmpresa { get; set; }
+        public static string _cNumeroPatronalEmpresa { get; set; }
+        public static byte[] _bLogoEmpresa { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: EstadosCreditoEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class EstadosCreditoEntity
+    {
+        public int nEstadoProcesoCredito { get; set; }
+        public int nEstadoAutorizadaCredito { get; set; }
+        public int nEstadoAutorizadaAdmonCredito { get; set; }
+        public int nEstadoRechazadaCredito { get; set; }
+        public int nEstadoAnuladaProcesoCredito { get; set; }
+        public int nEstadoAnuladaCursoPagoCredito { get; set; }
+        public int nEstadoDesembolsoHechoCredito { get; set; }
+
+        public string cEstadoProcesoCredito { get; set; }
+        public string cEstadoAutorizadaCredito { get; set; }
+        public string cEstadoAutorizadaAdmonCredito { get; set; }
+        public string cEstadoRechazadaCredito { get; set; }
+        public string cEstadoAnuladaProcesoCredito { get; set; }
+        public string cEstadoAnuladaCursoPagoCredito { get; set; }
+        public string cEstadoDesembolsoHechoCredito { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: FiadorList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class FiadorList
+    {
+        public int fiadorID { get; set; }
+        public int personaID { get; set; }
+        public string fiadorName { get; set; }
+        public string municipio { get; set; }
+        public string lugarTrabajo { get; set; }
+        public string puesto { get; set; }
+        public string observacion { get; set; }
+        public string parentesco { get; set; }
+        public string estado { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: PagoCuotaEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class PagoCuotaEntity
+    {
+        public int PAGOID { get; set; }
+        public int SOLICITUDID { get; set; }
+        public DateTime FECHAPAGO { get; set; }
+        public string NUMERODOCUMENTO { get; set; }
+        public int TABLAPAGOID { get; set; }
+        public byte NUMEROCUOTA { get; set; }
+        public Decimal PRINCIPAL { get; set; }
+        public Decimal INTERES { get; set; }
+        public Decimal MORA { get; set; }
+        public Decimal MANTENIMIENTO { get; set; }
+        public Decimal TOTAL { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: PersonaCombo.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class PersonaCombo
+    {
+        public int personaID { get; set; }
+        public string personaName { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: PersonaList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class PersonaList
+    {
+        #region campos
+
+        public int PersonaID{ get; set; }
+        public String Nombre1 { get; set; }
+        public String Nombre2 { get; set; }
+        public String Apellido1 { get; set; }
+        public String Apellido2 { get; set; }
+        public String Direccion { get; set; }
+        public bool Activo { get; set; }
+        public string Sexo { get; set; }
+        public String Municipio { get; set; }
+        public String Cedula { get; set; }
+        public String fechaNacimiento { get; set; }
+        public String EstadoCivil { get; set; }
+        public String Profesion { get; set; }
+
+        #endregion
+
+        #region constructor
+
+        public PersonaList() { }
+
+        #endregion
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ReciboClassEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class ReciboClassEntity
+    {
+    public int CUOTAID {get; set;}
+    public string NORECIBO {get; set;}
+    public string CLIENTE {get; set;}
+    public Decimal MONTOPAGADO {get; set;}
+    public string MONEDA {get; set;}
+    public string CONCEPTO {get; set;}
+    public Decimal TIPOCAMBIO {get; set;}
+    public Decimal PRINCIPAL {get; set;}
+    public Decimal MANTENIMIENTO {get; set;}
+    public Decimal INTERES {get; set;}
+    public DateTime FECHAPAGO {get; set;}
+    public string NOPRESTAMO {get; set;}
+    public string RUBRO { get; set; }    
+    public Decimal SALDO { get; set; }
+    public string MONTOLETRAS { get; set; }
+    public string FONDO { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RubroDetalleEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class RubroDetalleEntity
+    {
+        public int rubroID { get; set; }
+        public int rubroDetalleID { get; set; }
+        public string rubro { get; set; }
+        public Decimal comisionPor { get; set; }        
+        public int plazoMeses { get; set; }
+        public int numPagos { get; set; }        
+        public string frecuenciaPago { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RubroDetalleList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class RubroDetalleList
+    {
+        public int detalleId { get; set; }
+        public int rubroId { get; set; }
+        public string rubro { get; set; }        
+        public string frecuenciaPago { get; set; }
+        public Decimal tasaInteres { get; set; } // rubro detalle
+        public int plazo { get; set; } // rubro detalle
+        public int numeroPagos { get; set; }
+        public bool estado { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: SaldoRealYMmtoValor.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class SaldoRealYMmtoValor
+    {
+        public Decimal mmtoValor { get; set; }
+        public Decimal saldoReal { get; set; }        
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: SociosNegocio.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class SociosNegocio
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: TablaCalculoDiarioBimensual.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class TablaCalculoDiarioBimensual
+    {
+        public int creditoid { get; set; }
+        public string proceso { get; set; }
+        public DateTime dFecha { get; set; }
+        public decimal nTipoCambio { get; set; }
+        public decimal nMontoEntregado { get; set; }
+        public decimal nMmtoValor { get; set; }
+        public decimal nAmortizacionPrincipal { get; set; }
+        public decimal nMontoAcumuladoAntes { get; set; }
+        public decimal nMontoAcumulado { get; set; }
+        public DateTime dFechaDesde { get; set; }
+        public DateTime dFechaHasta { get; set; }
+        public Int16 nDias { get; set; }
+        public decimal nInteresCorriente { get; set; }
+        public decimal nMoratorios { get; set; }
+        public decimal nMmtoInteres { get; set; }
+        public decimal nAmortizacionInteres { get; set; }
+        public decimal nInteresAcumulado { get; set; }
+        public decimal nSaldoTotal { get; set; }
+        public string nFuenteSaldos { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: TablaPagosEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class TablaPagosEntity
+    {
+        //campos para generar la tabla
+        public int? tablaPagoID { get; set; }
+        public int? creditoID { get; set; }
+        public string numeroPago { get; set; }
+        public string fechaPago { get; set; }
+        public Decimal? montoPrincipal { get; set; }        
+        public Decimal? montoMantenimiento { get; set; }
+        public Decimal? montoInteres { get; set; }
+        public Decimal? montoTotal { get; set; }        
+        public Decimal? montoSaldo { get; set; }
+        public string estadoCuota { get; set; }
+
+
+        //otros campos de la tabla
+        public Decimal? montoInteresAbonado { get; set; }               
+        public Decimal? montoPagar { get; set; }
+        public Decimal? montoAhorro { get; set; }        
+        public Decimal? saldoReal { get; set; }
+        public Decimal? saldoActualizado { get; set; }
+        public Decimal? montoPrincipalAbonado { get; set; }
+        public Decimal? montoMantenimientoAbonado { get; set; }
+        public Decimal? montoInteresReal { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: TasaCambioHoy.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public static class TasaCambioHoy
+    {
+        public static int id { get; set; }
+        public static Decimal value { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: TipoCambioExcel.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class TipoCambioExcel
+    {
+        public int nStbMonedaBaseID { get; set; }
+        public int nStbMonedaCambioID { get; set; }
+        public DateTime dFechaTCambio { get; set; }
+        public Decimal nMontoTCambio { get; set; }
+        public int nActivo { get; set; }
+        public int nOcupado { get; set; }
+        public string cUsuarioCreacion { get; set; }
+        public DateTime dFechaCreacion { get; set; }       
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: TipoCambioList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class TipoCambioList
+    {
+        public int id { get; set; }
+        public string anio { get; set; }
+        public string mes { get; set; }
+        public DateTime fecha { get; set; }
+        public Decimal monto { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ValorCatalogoList.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities
+{
+    public class ValorCatalogoList
+    {
+        public int valorCatalogoId { get; set; }
+        public int catalogoId { get; set; }
+        public string codigoInterno { get; set; }
+        public string valorCatalogoDescripcion { get; set; }
+        public bool estado { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ClienteTab.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.CustomTabEntities
+{
+    public class ClienteTab
+    {
+        public string fechaNacimiento { get; set; }
+        public string cedula { get; set; }
+        public string sexo { get; set; }
+        public string municipio { get; set; }
+        public string direccion { get; set; }
+        public string estadoCivil { get; set; }
+        public string profesion { get; set; }
+        public byte[] foto { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: PersonaTab.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.CustomTabEntities
+{
+    public class PersonaTab
+    {
+        public string fechaNacimiento { get; set; }
+        public string cedula { get; set; }
+        public string sexo { get; set; }
+        public string municipio { get; set; }
+        public string direccion { get; set; }
+        public string estadoCivil { get; set; }
+        public string profesion { get; set; }
+        public byte[] foto { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CarteraRptEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class CarteraRptEntity
+    {
+        public int SOLICITUDID { get; set; }
+        public int CLIENTEID { get; set; }
+        public string CLIENTE { get; set; }
+        public decimal MONTOCOR { get; set; }
+        public decimal MONTOUSD { get; set; }
+        public DateTime FECHAENTREGA{ get; set; }
+        public DateTime FECHAVENCE { get; set; }
+        public decimal INTERESCOR { get; set; }
+        public decimal INTERESDOL { get; set; }
+        public decimal MMTOCOR { get; set; }
+        public decimal MMTODOL { get; set; }
+        public decimal PRINCIPALCOR { get; set; }
+        public decimal PRINCIPALDOL { get; set; }
+        public decimal SALDOCOR { get; set; }
+        public decimal SALDODOL { get; set; }
+        public int FONDOID { get; set; }
+        public int RUBROID { get; set; }
+        public int COMARCAID { get; set; }
+        public decimal SALDOICOR { get; set; }        
+        public decimal SALDOIDOL { get; set; }
+        public decimal SALDOAMCOR { get; set; }
+        public decimal SALDOAMDOL { get; set; }        
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: Clientes.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class Clientes
+    {
+        public int nStbClienteID { get; set; }
+        public string cCodigoCliente { get; set; }
+        public int nStbPersonaID { get; set; }
+        public string nombresApellidos { get; set; }
+        public string sexo { get; set; }
+        public string cDireccion { get; set; }
+        public bool nTrabaja { get; set; }
+        public string cLugarTrabajo { get; set; }
+        public string cDireccionTrabajo { get; set; }
+        public string puesto { get; set; }
+        public decimal nSueldoMensual { get; set; }
+        public string cObservaciones { get; set; }
+        public string prestamoActivo { get; set; }
+        public DateTime dFechaDesdeDireccion { get; set; }
+        public DateTime dFechaHastaDireccion { get; set; }
+        public DateTime dFechaNacApertura { get; set; }
+        public string cTelefono1 { get; set; }
+        public string cCelular1 { get; set; }
+        public string cNumeroCedula { get; set; }
+        public string cSiglas { get; set; }
+        public string cNumeroRUC { get; set; }
+        public string cEMail { get; set; }
+        public byte[] bFoto { get; set; }
+        public int edad { get; set; }
+        public string estadoCivil { get; set; }
+        public string escolaridad { get; set; }
+        public string profesion { get; set; }
+        public string tipoVivienda { get; set; }
+        public string municipio { get; set; }
+        public string periodoDireccion { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: DesembolsoRptEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class DesembolsoRptEntity
+    {
+        public int SOLICITUDID {get; set;}
+        public int CLIENTEID {get; set;}
+        public int DESEMBOLSOID {get; set;}
+        public string CLIENTE {get; set;}
+        public Decimal MONTOCOR {get; set;}
+        public Decimal MONTOUSD {get; set;}
+        public string RUBRO {get; set;}
+        public Decimal TIPOCAMBIO { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: EstadoCuentaEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class EstadoCuentaEntity
+    {
+        public int NSCRSOLICITUDID { get; set; }
+        public int NSTBCLIENTEID { get; set; }
+        public string CNOMBRE1 { get; set; }
+        public string CNOMBRE2 { get; set; }
+        public string CAPELLIDO1 { get; set; }
+        public string CAPELLIDO2 { get; set; }
+        public Decimal NMONTOAPRUEBAC { get; set; }
+        public DateTime DFECHAPAGADO { get; set; }
+        public DateTime DFECHAPAGO { get; set; }
+        public string RUBRO { get; set; }
+        public Decimal NTASAINTERES { get; set; }
+        public byte NPLAZO { get; set; }
+        public byte NPLAZOMESES { get; set; }
+        public byte APAGOSANIOS { get; set; }
+        public int N_INDICE { get; set; }
+        public DateTime D_FECHA_CORTE { get; set; }
+        public int N_PAGO_ID { get; set; }
+        public Decimal N_TIPO_CAMBIO { get; set; }        
+        public Decimal N_MANTENIMIENTO_DEVENGADO_AM { get; set; }
+        public Decimal N_MANTENIMIENTO_ABONADO_AM { get; set; }
+        public Decimal N_AMORTIZACION_ABONADA { get; set; }
+        public Decimal N_DESEMBOLSO_ACTUALIZADO { get; set; }
+        public Int16 N_DIAS_ENTRE_FECHA { get; set; }
+        public Decimal N_INTERES_DEVENGADO_ACUMULADO { get; set; }
+        public Decimal N_INTERES_ABONADO { get; set; }
+        public Decimal N_SALDO_TOTAL { get; set; }
+        public Decimal N_MONTO_PAGO { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ResumenEgresosRptEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class ResumenEgresosRptEntity
+    {
+        public int SOLICITUDID {get; set;}
+        public int CLIENTEID {get; set;}
+        public int DESEMBOLSOID {get; set;}
+        public string CLIENTE {get; set;}
+        public Decimal MONTOCOR {get; set;}
+        public Decimal MONTOUSD {get; set;}
+        public string RUBRO {get; set;}
+        public Decimal TIPOCAMBIO { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ResumenIngresosRptEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class ResumenIngresosRptEntity
+    {
+        public DateTime FECHAPAGO { get; set; }
+        public string NORECIBO { get; set; }
+        public string RUBRO { get; set; }
+        public Decimal TIPOCAMBIO { get; set; }
+        public int SOLICITUDID { get; set; }
+        public int CLIENTEID { get; set; }
+        public string CLIENTE { get; set; }
+        public Decimal PRINCIPALCOR { get; set; }
+        public Decimal MMTOCOR { get; set; }
+        public Decimal INTERESCOR { get; set; }
+        public Decimal TOTALCOR { get; set; }
+        public Decimal PRINCIPALDOL { get; set; }
+        public Decimal MMTODOL { get; set; }
+        public Decimal INTERESDOL { get; set; }
+        public Decimal TOTALDOL { get; set; }
+        public int FONDOID { get; set; }
+        public int RUBROID { get; set; }
+        public int COMARCAID { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RptDatosPrestamoCliente.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class RptDatosPrestamoCliente
+    {
+       public int N_SOLICITUD_ID { get; set; } 
+	   public string cliente { get; set; } 
+	   public Decimal nMontoApruebaC { get; set; } 
+	   public string deslizamiento { get; set; } 
+	   public DateTime dFechaPagado { get; set; }
+       public Byte nPlazoMeses { get; set; } 
+       public Decimal nTasaInteres { get; set; } 
+       public DateTime vence { get; set; } 
+       public Byte frecuencia { get; set; } 
+       public Byte NumPagos { get; set; } 
+       public Decimal nMontoTCambio { get; set; }
+       public string rubro { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RptDistribucionPagoEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class RptDistribucionPagoEntity
+{
+    public int N_SOLICITUD_ID { get; set; }
+    public string CLIENTE { get; set; }
+    public Decimal N_MONTO_APRUEBA { get; set; }
+    public string DESLIZAMIENTO { get; set; }
+    public DateTime DFECHAPAGADO { get; set; }
+    public Byte NPLAZOMESES { get; set; }
+    public Decimal NTASAINTERES { get; set; }
+    public DateTime VENCE { get; set; }
+    public Byte FRECUENCIA { get; set; }
+    public Byte NUMPAGOS { get; set; }
+    public Decimal NMONTOTCAMBIO { get; set; }
+    public string RUBRO { get; set; }
+    public int N_INDICE { get; set; }	
+	public DateTime D_FECHA_CORTE { get; set; }
+	public Decimal N_TIPO_CAMBIO { get; set; }
+	public Int16 N_DIAS_ENTRE_FECHA { get; set; }
+	public Decimal N_SALDO_TOTAL { get; set; }
+	public Decimal N_DESEMBOLSO_ACTUALIZADO { get; set; }
+	public Decimal N_SALDO_AMORTIZACION { get; set; }
+	public Decimal N_MANTENIMIENTO_DEVENGADO_AM { get; set; }
+	public Decimal N_MANTENIMIENTO_DEVENGADO_ACUMULADO_AM { get; set; }
+	public Decimal N_MANTENIMIENTO_ABONADO_AM { get; set; }
+	public Decimal N_MANTENIMIENTO_ABONADO_ACUMULADO_AM { get; set; } 
+	public Decimal N_MANTENIMIENTO_PENDIENTE_AM { get; set; }
+	public Decimal N_MANTENIMIENTO_PENDIENTE_ACUMULADO_AM { get; set; } 
+	public Decimal N_AMORTIZACION_DEVENGADA { get; set; }
+	public Decimal N_AMORTIZACION_DEVEGADA_ACUMULADA { get; set; } 
+	public Decimal N_AMORTIZACION_ABONADA { get; set; }
+	public Decimal N_AMORTIZACION_ABONADA_ACUMULADA { get; set; } 
+	public Decimal N_AMORTIZACION_PENDIENTE { get; set; }
+	public Decimal N_AMORTIZACION_PENDIENTE_ACUMULADO { get; set; }
+	public Decimal N_INTERES_DEVENGADO { get; set; }
+    public Decimal N_INTERES_DEVENGADO_ACUMULADO { get; set; }
+    public Decimal N_INTERES_ABONADO { get; set; }
+	public Decimal N_INTERES_ABONADO_ACUMULADO { get; set; }
+    public Decimal N_INTERES_PENDIENTE { get; set; }
+	public Decimal N_INTERES_PENDIENTE_ACUMULADO { get; set; }
+
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: TablaPagoRptEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class TablaPagoRptEntity
+    {
+        public int SOLICITUDID { get; set; }
+        public int CLIENTEID { get; set; }
+        public string CLIENTE { get; set; }
+        public decimal MONTOCOR { get; set; }
+        public decimal MONTOUSD { get; set; }
+        public decimal TASAINTERES { get; set; }
+        public byte PLAZO { get; set; }
+        public byte NUMPAGOS { get; set; }
+        public string FRECUENCIA { get; set; }
+        public DateTime FECHAENTREGA { get; set; }
+        public DateTime FECHAVENCE { get; set; }
+        public decimal TIPOCAMBIO { get; set; }
+        public decimal PORDELIZAMIENTO { get; set; }
+        public byte NOCUOTA { get; set; }        
+        public DateTime FECHAPAGO { get; set; }
+        public decimal PRINCIPAL  { get; set; }
+        public decimal MMTO { get; set; }
+        public decimal MONTOINTERES { get; set; }
+        public decimal TOTAL { get; set; }
+        public decimal SALDO { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: TablaProyeccionRptEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Reportes
+{
+    public class TablaProyeccionRptEntity
+    {
+        public int nScrTablaproyeccionPagoID { get; set; } 
+        public int nScrSolicitudID { get; set; } 
+        public byte nNumeroCuota { get; set; }
+        public DateTime dFechaPago { get; set; } 
+        public Decimal nMontoPrincipal { get; set; } 
+        public Decimal nMontoPrincipalAbonado { get; set; }
+        public Decimal nMontoMantenimientoPrincipal { get; set; } 
+        public Decimal nMontoMantenimientoAbonadoPrincipal { get; set; }
+        public Decimal nMontoInteres { get; set; } 
+        public Decimal nMontoInteresAbonado { get; set; } 
+        public Decimal nMontoMora { get; set; }
+        public Decimal nMontoMoraAbonado { get; set; } 
+        public Decimal nMontoMantenimientoInteres { get; set; }
+        public Decimal nMontoMantenimientoInteresAbonado { get; set; } 
+        public Decimal nMontoTotal { get; set; } 
+        public Decimal nMontoPagado { get; set; }
+        public Decimal nMontoSaldo { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: AccionServicioUsuarioEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class AccionServicioUsuarioEntity
+    {
+        public int accionId { get; set; }
+        public int servicioUsuarioId { get; set; }
+        public string accion { get; set; }
+        public string servicioUsuario { get; set; }
+        public bool activo { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CuentaRolAplicacionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class CuentaRolAplicacionEntity
+    {
+        public int cuentaId_ { get; set; }
+        public int rolId_ { get; set; }
+        public string rol_ { get; set; }
+        public string cuenta_ { get; set; }
+        public string aplicacion_ { get; set; }
+        public bool activa { get; set;  }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: CuentaRolEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class CuentaRolEntity
+    {
+        public int cuentaId_ { get; set; }
+        public int rolId_ { get; set; }
+        public string rol_ { get; set; }
+        public string cuenta_ { get; set; }        
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ModuloAplicionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class ModuloAplicionEntity
+    {
+        public int aplicacionId_ { get; set; }
+        public int moduloId_ { get; set; }
+        public string aplicacion_ { get; set; }
+        public string modulo_ { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RolAccionAplicacionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class RolAccionAplicacionEntity
+    {
+        public string servicio_ { get; set; }
+        public string modulo_ { get; set; }
+        public string accion_ { get; set; }
+        public int accionId_ { get; set; }                     
+        public bool activa_ { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RolAccionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class RolAccionEntity
+    {
+        public int rolAccionId_ { get; set; }
+        public int rolId_ { get; set; }
+        public int accionId_ { get; set; }
+        public string rol_ { get; set; }
+        public string accion_ { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RolAplicacionEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class RolAplicacionEntity
+    {
+        public int aplicacionId { get; set; }
+        public int rolId { get; set; }
+        public string aplicacion { get; set; }
+        public string rol { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: RolCuentaRolEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class RolCuentaRolEntity
+    {
+        public int cuentaId_ { get; set; }
+        public string cuenta { get; set; }
+        public int cuentaRolId { get; set; }
+    }
+}
+
+
+
+==================================================
+ ARCHIVO: ServicioUsuarioModuloEntity.cs
+==================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.CustomEntities.Seguridad
+{
+    public class ServicioUsuarioModuloEntity
+    {
+        public int servicioUsuarioId_ { get; set; }
+        public int moduloId_ { get; set; }
+        public string servicioUsuario_ { get; set; }
+        public string modulo_ { get; set; }
+    }
+}
+
+
+
