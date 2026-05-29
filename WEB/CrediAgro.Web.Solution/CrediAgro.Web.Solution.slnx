@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../../shared/CrediAgro.Contracts/CrediAgro.Contracts.csproj" />
   <Project Path="CrediAgro.Web/CrediAgro.Web.csproj" />
 </Solution>
