@@ -20,4 +20,11 @@ public sealed class ClientesController : ControllerBase
         var result = await _clienteService.ListadoClientesAsync(cancellationToken);
         return Ok(result);
     }
+
+    [HttpGet("combo")]
+    public async Task<IActionResult> Combo(CancellationToken cancellationToken)
+    {
+        var result = await _clienteService.ListadoClientesComboAsync(cancellationToken);
+        return Ok(result);
+    }
 }

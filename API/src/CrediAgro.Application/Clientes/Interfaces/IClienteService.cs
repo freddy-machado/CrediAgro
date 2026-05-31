@@ -5,4 +5,6 @@ namespace CrediAgro.Application.Clientes.Interfaces;
 public interface IClienteService
 {
     Task<IReadOnlyList<ClienteListItemDto>> ListadoClientesAsync(CancellationToken cancellationToken = default);
+
+    Task<IReadOnlyList<ClienteComboItemDto>> ListadoClientesComboAsync(CancellationToken cancellationToken = default);
 }

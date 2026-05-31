@@ -26,4 +26,12 @@ public sealed class ClienteService : IClienteService
             .Select(e => _mapper.Map<ClienteListItemDto>(e))
             .ToList();
     }
+
+    public async Task<IReadOnlyList<ClienteComboItemDto>> ListadoClientesComboAsync(CancellationToken cancellationToken = default)
+    {
+        var entities = await _clienteRepository.ListadoClientesComboAsync();
+        return entities
+            .Select(e => _mapper.Map<ClienteComboItemDto>(e))
+            .ToList();
+    }
 }

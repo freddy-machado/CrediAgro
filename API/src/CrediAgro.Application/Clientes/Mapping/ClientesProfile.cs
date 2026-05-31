@@ -16,5 +16,9 @@ public sealed class ClientesProfile : Profile
             .ForMember(d => d.LugarTrabajo, o => o.MapFrom(s => s.lugarTrabajo))
             .ForMember(d => d.Puesto, o => o.MapFrom(s => s.puesto))
             .ForMember(d => d.Observacion, o => o.MapFrom(s => s.observacion));
+
+        CreateMap<ClienteCombo, ClienteComboItemDto>()
+            .ForMember(d => d.ClienteId, o => o.MapFrom(s => s.clienteID))
+            .ForMember(d => d.ClienteName, o => o.MapFrom(s => s.clienteName));
     }
 }
