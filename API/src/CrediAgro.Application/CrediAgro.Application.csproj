@@ -1,15 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\shared\CrediAgro.Contracts\CrediAgro.Contracts.csproj" />
+    <ProjectReference Include="..\CrediAgro.Infrastructure\CrediAgro.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Clientes\Interfaces\" />
-    <Folder Include="Clientes\Services\" />
-    <Folder Include="Common\" />
-    <Folder Include="Creditos\Interfaces\" />
-    <Folder Include="Creditos\Services\" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="13.0.1" />
   </ItemGroup>
 
   <PropertyGroup>

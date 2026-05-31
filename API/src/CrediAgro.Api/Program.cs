@@ -1,16 +1,21 @@
+using CrediAgro.Application.DependencyInjection;
+using CrediAgro.Infrastructure.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Controllers
 builder.Services.AddControllers();
 
+// Dependency injection for layers
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -19,10 +24,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Map controller endpoints
 app.MapControllers();
-
-// NOTE: The default WeatherForecast minimal API endpoint was removed.
-// Create dedicated controllers under the Controllers/ folder instead.
 
 app.Run();
