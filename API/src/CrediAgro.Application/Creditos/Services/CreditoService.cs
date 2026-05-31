@@ -23,4 +23,17 @@ public sealed class CreditoService : ICreditoService
             .Select(e => _mapper.Map<CreditoListItemDto>(e))
             .ToList();
     }
+
+    public async Task<IReadOnlyList<CreditoComboItemDto>> ListaCreditosComboAsync(int estadoDesembolsoId, CancellationToken cancellationToken = default)
+    {
+        if (estadoDesembolsoId <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(estadoDesembolsoId), "estadoDesembolsoId debe ser mayor que 0.");
+        }
+
+        var entities = await _creditoRepository.ListaCreditosComboAsync(estadoDesembolsoId);
+        return entities
+            .Select(e => _mapper.Map<CreditoComboItemDto>(e))
+            .ToList();
+    }
 }

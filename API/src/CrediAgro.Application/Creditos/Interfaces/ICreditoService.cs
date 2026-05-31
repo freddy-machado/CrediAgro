@@ -5,4 +5,6 @@ namespace CrediAgro.Application.Creditos.Interfaces;
 public interface ICreditoService
 {
     Task<IReadOnlyList<CreditoListItemDto>> ListadoCreditosAsync(CancellationToken cancellationToken = default);
+
+    Task<IReadOnlyList<CreditoComboItemDto>> ListaCreditosComboAsync(int estadoDesembolsoId, CancellationToken cancellationToken = default);
 }

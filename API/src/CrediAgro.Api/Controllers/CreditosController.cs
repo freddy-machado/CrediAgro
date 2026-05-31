@@ -20,4 +20,11 @@ public sealed class CreditosController : ControllerBase
         var result = await _creditoService.ListadoCreditosAsync(cancellationToken);
         return Ok(result);
     }
+
+    [HttpGet("combo")]
+    public async Task<IActionResult> Combo([FromQuery] int estadoDesembolsoId, CancellationToken cancellationToken)
+    {
+        var result = await _creditoService.ListaCreditosComboAsync(estadoDesembolsoId, cancellationToken);
+        return Ok(result);
+    }
 }
