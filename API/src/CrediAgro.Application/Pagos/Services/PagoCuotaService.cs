@@ -45,10 +45,72 @@ public sealed class PagoCuotaService : IPagoCuotaService
             throw new ArgumentOutOfRangeException(nameof(monto), "monto no puede ser negativo.");
         }
 
-        // fechaPago: permitimos cualquier DateTime válido; la regla de negocio se puede refinar luego.
         var entities = await _pagoCuotaRepository.CuotasPendientePagoAsync(creditoId, fechaPago, monto);
         return entities
             .Select(e => _mapper.Map<CuotaPendientePagoDto>(e))
             .ToList();
+    }
+
+    public async Task<CreatePagoCuotaResponseDto> PagarCuotaPrestamoAsync(
+        int creditoId,
+        CreatePagoCuotaRequestDto request,
+        string usuario,
+        CancellationToken cancellationToken = default)
+    {
+        if (creditoId <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(creditoId), "creditoId debe ser mayor que 0.");
+        }
+
+        if (request is null)
+        {
+            throw new ArgumentNullException(nameof(request));
+        }
+
+        if (request.CreditoId != 0 && request.CreditoId != creditoId)
+        {
+            throw new ArgumentException("El creditoId de la ruta no coincide con el request.", nameof(request));
+        }
+
+        if (request.MontoPago <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(request.MontoPago), "MontoPago debe ser mayor que 0.");
+        }
+
+        if (request.MonedaId <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(request.MonedaId), "MonedaId debe ser mayor que 0.");
+        }
+
+        if (request.TipoCambio <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(request.TipoCambio), "TipoCambio debe ser mayor que 0.");
+        }
+
+        var numeroRecibo = request.NumeroRecibo;
+        if (string.IsNullOrWhiteSpace(numeroRecibo))
+        {
+            numeroRecibo = await _pagoCuotaRepository.ObtenerNumeroPagoCuotaAsync();
+        }
+
+        var pagoId = await _pagoCuotaRepository.PagarCuotaPrestamoAsync(
+            creditoId,
+            request.FechaPago,
+            request.MontoPago,
+            request.ConceptoPago,
+            numeroRecibo,
+            request.MonedaId,
+            usuario,
+            request.CondonaMora,
+            request.MontoExoneraIC,
+            request.MontoExoneraMmto,
+            request.MotivoExoneracion,
+            request.TipoCambio);
+
+        return new CreatePagoCuotaResponseDto
+        {
+            PagoId = pagoId,
+            NumeroRecibo = numeroRecibo,
+        };
     }
 }

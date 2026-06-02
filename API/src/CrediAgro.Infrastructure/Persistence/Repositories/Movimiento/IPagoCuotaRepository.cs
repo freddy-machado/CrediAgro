@@ -12,4 +12,18 @@ public interface IPagoCuotaRepository : IRepository<ScrPagoCuotum>
     Task<int> AnularPagoCuotaAsync(int cuotaId, int creditoId);
     Task<ReciboClassEntity?> ObtenerDatosPagoCuotaReciboAsync(int pagoId);
     Task<IEnumerable<DistribucionPagoEntity>> ObtenerDistribucionPagoAsync(DateTime fechaPago, int creditoId);
+
+    Task<int> PagarCuotaPrestamoAsync(
+        int creditoId,
+        DateTime fechaPago,
+        decimal montoPago,
+        string conceptoPago,
+        string numeroRecibo,
+        int monedaId,
+        string usuario,
+        bool condonaMora,
+        decimal montoExoneraIc,
+        decimal montoExoneraMmto,
+        string motivoExoneracion,
+        decimal tipoCambio);
 }

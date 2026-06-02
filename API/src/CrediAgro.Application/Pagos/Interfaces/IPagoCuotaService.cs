@@ -11,4 +11,10 @@ public interface IPagoCuotaService
         DateTime fechaPago,
         decimal monto,
         CancellationToken cancellationToken = default);
+
+    Task<CreatePagoCuotaResponseDto> PagarCuotaPrestamoAsync(
+        int creditoId,
+        CreatePagoCuotaRequestDto request,
+        string usuario,
+        CancellationToken cancellationToken = default);
 }

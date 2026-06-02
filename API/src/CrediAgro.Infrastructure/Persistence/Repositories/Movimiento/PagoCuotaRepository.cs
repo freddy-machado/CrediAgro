@@ -100,4 +100,57 @@ public class PagoCuotaRepository : Repository<ScrPagoCuotum>, IPagoCuotaReposito
                    N_SALDO_AMORTIZACION = tp.nMontoPrincipal - (tp.nMontoPrincipalAbonado ?? 0),
                    N_MONTO_PAGO = tp.nMontoTotal - tp.nMontoPagado
                }).ToListAsync();
+
+    public async Task<int> PagarCuotaPrestamoAsync(
+        int creditoId,
+        DateTime fechaPago,
+        decimal montoPago,
+        string conceptoPago,
+        string numeroRecibo,
+        int monedaId,
+        string usuario,
+        bool condonaMora,
+        decimal montoExoneraIc,
+        decimal montoExoneraMmto,
+        string motivoExoneracion,
+        decimal tipoCambio)
+    {
+        // Corresponde a: EXEC [USP_PAGO_CUOTA_TABLA_DIARIO] ...
+        // El SP se encarga de insertar cabecera/detalle y retornar el id del pago.
+
+        var sql =
+            "EXEC [dbo].[USP_PAGO_CUOTA_TABLA_DIARIO] " +
+            "@N_SOLICITUD_ID={0}," +
+            "@D_FECHA_PAGO={1}," +
+            "@N_MONTO_PAGO={2}," +
+            "@C_CONCEPTO_PAGO={3}," +
+            "@C_NUMERO_DOCUMENTO={4}," +
+            "@N_MONEDA_ID={5}," +
+            "@C_USUARIO={6}," +
+            "@C_CONDONA_MORA={7}," +
+            "@N_MONTO_EXONERA_IC={8}," +
+            "@N_MONTO_EXONERA_MMTO={9}," +
+            "@MOTIVO_EONERACION={10}," +
+            "@N_TIPO_CAMBIO={11}";
+
+        // EF Core: ejecutamos como query scalar (FromSqlRaw no soporta scalar directo), así que usamos SqlQuery<T>.
+        // Nota: Database.SqlQuery<T> requiere EF Core 7+. Si tu versión no lo soporta, lo ajustamos a ADO.NET.
+        var pagoId = await _context.Database
+            .SqlQueryRaw<int>(sql,
+                creditoId,
+                fechaPago,
+                montoPago,
+                conceptoPago,
+                numeroRecibo,
+                monedaId,
+                usuario,
+                condonaMora,
+                montoExoneraIc,
+                montoExoneraMmto,
+                motivoExoneracion ?? string.Empty,
+                tipoCambio)
+            .SingleAsync();
+
+        return pagoId;
+    }
 }
